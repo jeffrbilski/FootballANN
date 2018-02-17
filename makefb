@@ -1,0 +1,8 @@
+football : football.cpp trainData.o ANN.o
+	c++ -o football football.cpp trainData.o ANN.o
+
+ANN.o : ANN.h ANN.cpp
+	c++ -c ANN.cpp
+
+trainData.o : trainData.h trainData.cpp
+	c++ -c trainData.cpp
